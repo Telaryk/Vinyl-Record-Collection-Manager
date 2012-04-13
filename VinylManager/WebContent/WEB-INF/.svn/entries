@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web"
+   revision="2"
+   last-author="maire"
+   url="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web/VinylRecordCollectionManager/WebContent/WEB-INF"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2012-04-04T21:33:34.088000Z"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   name="web.xml"
+   revision="9"
+   checksum="fed947b0d04c5ded2c7cc7d4c1bd3d8d"
+   last-author="maire"
+   committed-rev="9"
+   text-time="2012-04-08T21:38:47.000000Z"
+   kind="file"
+   committed-date="2012-04-08T21:46:26.739000Z"/>
+</wc-entries>

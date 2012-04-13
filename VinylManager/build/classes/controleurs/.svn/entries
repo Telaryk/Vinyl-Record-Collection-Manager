@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web"
+   name=""
+   revision="2"
+   last-author="maire"
+   url="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web/VinylRecordCollectionManager/src/controleurs"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2012-04-04T21:33:34.088000Z"/>
+<entry
+   name="EditUser.java"
+   revision="8"
+   checksum="1e970726721bb7f756cd3065ea88c140"
+   last-author="maire"
+   committed-rev="8"
+   text-time="2012-04-07T16:16:37.000000Z"
+   kind="file"
+   committed-date="2012-04-07T16:18:46.183000Z"/>
+<entry
+   name="Home.java"
+   revision="9"
+   checksum="0f640508f17239029e584b1a408cc85a"
+   last-author="maire"
+   committed-rev="9"
+   text-time="2012-04-08T21:35:26.000000Z"
+   kind="file"
+   committed-date="2012-04-08T21:46:26.739000Z"/>
+<entry
+   name="Inscription.java"
+   revision="8"
+   checksum="4a5245e46ddbabbbc087366485504ce3"
+   last-author="maire"
+   committed-rev="8"
+   text-time="2012-04-07T16:16:56.000000Z"
+   kind="file"
+   committed-date="2012-04-07T16:18:46.183000Z"/>
+<entry
+   name="Login.java"
+   revision="9"
+   checksum="075de4ea2c9dd800301c94e352cb4d6c"
+   last-author="maire"
+   committed-rev="9"
+   text-time="2012-04-08T20:53:00.000000Z"
+   kind="file"
+   committed-date="2012-04-08T21:46:26.739000Z"/>
+<entry
+   name="ProfilUser.java"
+   revision="8"
+   checksum="a88873e9386835e64fd670b786501754"
+   last-author="maire"
+   committed-rev="8"
+   text-time="2012-04-07T16:19:19.000000Z"
+   kind="file"
+   committed-date="2012-04-07T16:18:46.183000Z"/>
+<entry
+   name="Recherche.java"
+   revision="15"
+   checksum="0829e46114a0693099988bfe0447a19b"
+   last-author="maire"
+   text-time="2012-04-09T14:33:40.000000Z"
+   committed-rev="15"
+   kind="file"
+   committed-date="2012-04-09T14:34:49.094000Z"/>
+</wc-entries>

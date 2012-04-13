@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web"
+   name=""
+   revision="2"
+   last-author="maire"
+   url="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web/VinylRecordCollectionManager/src/modeles"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2012-04-04T21:33:34.088000Z"/>
+<entry
+   name="ConnexionDB.java"
+   checksum="a1c4538a0707552856b7caa8efb2f81c"
+   last-author="maire"
+   text-time="2012-04-01T21:23:40.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2012-04-04T21:33:34.088000Z"/>
+<entry
+   name="EditUserModele.java"
+   revision="7"
+   checksum="775e81b03fc1385e3a1d4ec87a5ff691"
+   last-author="maire"
+   committed-rev="7"
+   text-time="2012-04-07T15:22:08.000000Z"
+   kind="file"
+   committed-date="2012-04-07T16:14:52.863000Z"/>
+<entry
+   name="InscriptionModele.java"
+   revision="8"
+   checksum="0f1416b8142a347671f33e0b133d61d9"
+   last-author="maire"
+   text-time="2012-04-07T16:18:39.000000Z"
+   committed-rev="8"
+   kind="file"
+   committed-date="2012-04-07T16:18:46.183000Z"/>
+<entry
+   name="LoginModele.java"
+   revision="4"
+   checksum="1a7b80127a234b3c924f365b755bc248"
+   last-author="maire"
+   text-time="2012-04-05T09:46:44.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2012-04-07T10:31:26.149000Z"/>
+<entry
+   name="Person.java"
+   revision="12"
+   checksum="75f903952a1d92450053099d7d5bf4e3"
+   last-author="maire"
+   committed-rev="12"
+   text-time="2012-04-09T09:48:37.000000Z"
+   kind="file"
+   committed-date="2012-04-09T10:14:17.981000Z"/>
+<entry
+   name="ProfilUserModele.java"
+   revision="4"
+   checksum="1b9d4a84343ce4757f7912810d3571c9"
+   last-author="maire"
+   committed-rev="4"
+   text-time="2012-04-07T10:03:43.000000Z"
+   kind="file"
+   committed-date="2012-04-07T10:31:26.149000Z"/>
+<entry
+   name="RechercheTrackViewModele.java"
+   revision="15"
+   checksum="5fa6965da13950ce92da0d73fda3206e"
+   last-author="maire"
+   committed-rev="15"
+   text-time="2012-04-09T14:34:05.000000Z"
+   kind="file"
+   committed-date="2012-04-09T14:34:49.094000Z"/>
+<entry
+   name="Record.java"
+   revision="9"
+   checksum="f1e4d8d902656477c4e3337d439011c6"
+   last-author="maire"
+   text-time="2012-04-08T20:49:14.000000Z"
+   committed-rev="9"
+   kind="file"
+   committed-date="2012-04-08T21:46:26.739000Z"/>
+<entry
+   name="RecordModele.java"
+   revision="10"
+   checksum="8ffb115fbf089939ac3140bc9ccb1d38"
+   last-author="maire"
+   committed-rev="10"
+   text-time="2012-04-08T22:18:28.000000Z"
+   kind="file"
+   committed-date="2012-04-08T22:26:25.960000Z"/>
+<entry
+   name="Track.java"
+   revision="14"
+   checksum="974af892407cc5a99ba69bd580c6c213"
+   last-author="maire"
+   text-time="2012-04-09T13:45:31.000000Z"
+   committed-rev="14"
+   kind="file"
+   committed-date="2012-04-09T14:27:08.569000Z"/>
+<entry
+   name="TrackModele.java"
+   revision="14"
+   kind="file"
+   deleted="true"/>
+<entry
+   name="User.java"
+   revision="4"
+   checksum="90d4f6b46226efa9045923cc8a9f3651"
+   last-author="maire"
+   text-time="2012-04-05T09:45:33.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2012-04-07T10:31:26.149000Z"/>
+</wc-entries>

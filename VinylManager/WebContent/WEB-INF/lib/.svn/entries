@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web"
+   revision="2"
+   last-author="maire"
+   url="http://arnaudmaire.unfuddle.com/svn/arnaudmaire_web/VinylRecordCollectionManager/WebContent/WEB-INF/lib"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2012-04-04T21:33:34.088000Z"/>
+<entry
+   name="mysql-connector-java-5.1.18-bin.jar"
+   checksum="78467fb2adf7f02bcfbff3ad022bc4e9"
+   last-author="maire"
+   text-time="2011-10-03T08:44:02.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2012-04-04T21:33:34.088000Z"
+   prop-time="2012-04-04T21:33:53.000000Z"/>
+</wc-entries>

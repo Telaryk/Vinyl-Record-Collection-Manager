@@ -1,0 +1,74 @@
+package modeles;
+
+import java.util.Date;
+
+public class Track {
+	
+	private int id;
+	private String title;
+	private int rhythm;
+	private String label;
+	private Person person;
+	private Date playing_time;
+	private Date release_date;
+	private String style;
+	private Record record;
+	
+	
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public int getRhythm() {
+		return rhythm;
+	}
+	public void setRhythm(int rhythm) {
+		this.rhythm = rhythm;
+	}
+	public String getLabel() {
+		return label;
+	}
+	public void setLabel(String label) {
+		this.label = label;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getStyle() {
+		return style;
+	}
+	public void setStyle(String style) {
+		this.style = style;
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	public Date getPlaying_time() {
+		return playing_time;
+	}
+	public void setPlaying_time(Date playingTime) {
+		playing_time = playingTime;
+	}
+	public Date getRelease_date() {
+		return release_date;
+	}
+	public void setRelease_date(Date releaseDate) {
+		release_date = releaseDate;
+	}
+	public Record getRecord() {
+		return record;
+	}
+	public void setRecord(Record record) {
+		this.record = record;
+	}
+
+}

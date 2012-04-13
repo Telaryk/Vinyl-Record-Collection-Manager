@@ -1,0 +1,39 @@
+package modeles;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class LoginModele {
+
+	private PreparedStatement st = null;
+	private ResultSet rs = null;
+
+	public ArrayList<User> RechercheUser(User user) {
+		ArrayList<User> liste = new ArrayList<User>();
+		try {
+			st = ConnexionDB.Con.prepareStatement("select * from User where username=? and password=?");
+			st.setString(1, user.getPseudo());
+			st.setString(2, user.getMotDePasse());
+
+			rs = st.executeQuery();
+
+			while (rs.next()) {
+				User u = new User();
+				u.setIdUser(rs.getInt("id"));
+				u.setPseudo(rs.getString("username"));
+				u.setMotDePasse(rs.getString("password"));
+				u.setEmail(rs.getString("email"));
+				u.setPrenom(rs.getString("first_name"));
+				u.setNom(rs.getString("last_name"));
+
+				liste.add(u);
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return liste;
+	}
+
+}

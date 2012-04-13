@@ -1,0 +1,31 @@
+package modeles;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InscriptionModele {
+	
+	private PreparedStatement st = null;
+	public String ajouter_ok;
+	
+	public void AjoutUser(User u) throws SQLException{
+		try{
+			st=ConnexionDB.Con.prepareStatement("insert into mydb.User(username,password,email,first_name,last_name,Language_id) values (?,?,?,?,?,?)");
+			st.setString(1, u.getPseudo());
+			st.setString(2, u.getMotDePasse());
+			st.setString(3, u.getEmail());
+			st.setString(4, u.getPrenom());
+			st.setString(5, u.getNom());
+			st.setInt(6, u.getLangue());
+
+			st.executeUpdate();
+			
+			ajouter_ok = "L'inscription est effectuée avec succès!!!!";
+		}
+		catch(Exception E){
+			ajouter_ok = "L'inscription n'est pas effectuée a cause d'un problème dans la requête!!!!";
+			System.out.println("Erreurs dans la requête d'inscription");
+		}
+	}
+
+}

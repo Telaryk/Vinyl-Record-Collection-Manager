@@ -1,0 +1,67 @@
+package controleurs;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import modeles.ConnexionDB;
+import modeles.InscriptionModele;
+import modeles.User;
+
+public class Inscription extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	public Inscription() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void init() throws ServletException {
+		@SuppressWarnings("unused")
+		ConnexionDB conn = new ConnexionDB();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.sendRedirect("formInscription.jsp");
+		
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		InscriptionModele i = new InscriptionModele();
+		
+		String spseudo = request.getParameter("pseudo");
+		String smotDePasse = request.getParameter("motdepasse");
+		String semail = request.getParameter("email");
+		String sprenom = request.getParameter("prenom");
+		String snom = request.getParameter("nom");
+		int slangue = Integer.parseInt(request.getParameter("langue"));
+		
+		User u = new User();
+		u.setPseudo(spseudo);
+		u.setMotDePasse(smotDePasse);
+		u.setEmail(semail);
+		u.setPrenom(sprenom);
+		u.setNom(snom);
+		u.setLangue(slangue);
+		
+		try {
+			i.AjoutUser(u);
+			request.getRequestDispatcher("formLogin.jsp").forward(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

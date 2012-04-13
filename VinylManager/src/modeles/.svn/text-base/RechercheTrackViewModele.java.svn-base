@@ -1,0 +1,235 @@
+package modeles;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class RechercheTrackViewModele {
+	
+	private PreparedStatement st = null;
+	private ResultSet rs = null;
+	
+	public ArrayList<Track> RecupListOfTrackByTitleName(String name){
+		
+		ArrayList<Track> arrayOfTrack = new ArrayList<Track>();
+		
+		try {
+		st = ConnexionDB.Con.prepareStatement("select tr.id, tr.title, tr.rhythm, tr.label, tr.playing_time, tr.release_date, st.name, pe.name, pe.id, tp.name, re.id, re.name " +
+												"from Tracks tr, Style st, Person pe, Tracks_has_Person thp, TypePerson tp, Record_has_Tracks rht, Record re " +
+												"where tr.title=? " +
+												"and st.id=tr.Style_id " +
+												"and thp.Tracks_id=tr.id " +
+												"and thp.Person_id=pe.id " +
+												"and tp.id=pe.TypePerson_id " +
+												"and rht.Record_id=re.id " +
+												"and rht.Tracks_id=tr.id");
+		st.setString(1, name);
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+			Track track = new Track();
+			Person p = new Person();
+			Record r = new Record();
+			
+			track.setId(rs.getInt("tr.id"));
+			track.setTitle(rs.getString("tr.title"));
+			track.setRhythm(rs.getInt("tr.rhythm"));
+			track.setLabel(rs.getString("tr.label"));
+			track.setPlaying_time(rs.getTime("tr.playing_time"));
+			track.setRelease_date(rs.getDate("tr.release_date"));
+			track.setStyle(rs.getString("st.name"));
+			
+			p.setName(rs.getString("pe.name"));
+			p.setId(rs.getInt("pe.id"));
+			p.setTypePerson(rs.getString("tp.name"));
+			track.setPerson(p);
+			
+			r.setId(rs.getInt("re.id"));
+			r.setName(rs.getString("re.name"));
+			track.setRecord(r);
+
+			arrayOfTrack.add(track);
+		}
+		
+		return arrayOfTrack;
+		
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+		return null;
+		
+	}
+	
+	
+	public ArrayList<Track> RecupListOfTrackByFullText(String text){
+		
+		ArrayList<Track> arrayOfTrack = new ArrayList<Track>();
+		
+		try {
+		st = ConnexionDB.Con.prepareStatement("select tr.id, tr.title, tr.rhythm, tr.label, tr.playing_time, tr.release_date, st.name, pe.name, pe.id, tp.name, re.id, re.name " +
+												"from Tracks tr, Style st, Person pe, Tracks_has_Person thp, TypePerson tp, Record_has_Tracks rht, Record re " +
+												"where (tr.title=? " +
+												"or tr.label=? " +
+												"or st.name=? " +
+												"or pe.name=? " +
+												"or re.name=?)" +
+												"and st.id=tr.Style_id " +
+												"and thp.Tracks_id=tr.id " +
+												"and thp.Person_id=pe.id " +
+												"and tp.id=pe.TypePerson_id " +
+												"and rht.Record_id=re.id " +
+												"and rht.Tracks_id=tr.id");
+		st.setString(1, text);
+		st.setString(2, text);
+		st.setString(3, text);
+		st.setString(4, text);
+		st.setString(5, text);
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+			Track track = new Track();
+			Person p = new Person();
+			Record r = new Record();
+			
+			track.setId(rs.getInt("tr.id"));
+			track.setTitle(rs.getString("tr.title"));
+			track.setRhythm(rs.getInt("tr.rhythm"));
+			track.setLabel(rs.getString("tr.label"));
+			track.setPlaying_time(rs.getTime("tr.playing_time"));
+			track.setRelease_date(rs.getDate("tr.release_date"));
+			track.setStyle(rs.getString("st.name"));
+			
+			p.setName(rs.getString("pe.name"));
+			p.setId(rs.getInt("pe.id"));
+			p.setTypePerson(rs.getString("tp.name"));
+			track.setPerson(p);
+			
+			r.setId(rs.getInt("re.id"));
+			r.setName(rs.getString("re.name"));
+			track.setRecord(r);
+
+			arrayOfTrack.add(track);
+		}
+		
+		return arrayOfTrack;
+		
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+		return null;
+		
+	}
+	
+	public ArrayList<Track> RecupListOfTrackByPersonName(String name){
+		
+		ArrayList<Track> arrayOfTrack = new ArrayList<Track>();
+		
+		try {
+		st = ConnexionDB.Con.prepareStatement("select tr.id, tr.title, tr.rhythm, tr.label, tr.playing_time, tr.release_date, st.name, pe.name, pe.id, tp.name, re.id, re.name " +
+												"from Tracks tr, Style st, Person pe, Tracks_has_Person thp, TypePerson tp, Record_has_Tracks rht, Record re " +
+												"where pe.name=? " +
+												"and st.id=tr.Style_id " +
+												"and thp.Tracks_id=tr.id " +
+												"and thp.Person_id=pe.id " +
+												"and tp.id=pe.TypePerson_id " +
+												"and rht.Record_id=re.id " +
+												"and rht.Tracks_id=tr.id");
+		st.setString(1, name);
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+			Track track = new Track();
+			Person p = new Person();
+			Record r = new Record();
+			
+			track.setId(rs.getInt("tr.id"));
+			track.setTitle(rs.getString("tr.title"));
+			track.setRhythm(rs.getInt("tr.rhythm"));
+			track.setLabel(rs.getString("tr.label"));
+			track.setPlaying_time(rs.getTime("tr.playing_time"));
+			track.setRelease_date(rs.getDate("tr.release_date"));
+			track.setStyle(rs.getString("st.name"));
+			
+			p.setName(rs.getString("pe.name"));
+			p.setId(rs.getInt("pe.id"));
+			p.setTypePerson(rs.getString("tp.name"));
+			track.setPerson(p);
+			
+			r.setId(rs.getInt("re.id"));
+			r.setName(rs.getString("re.name"));
+			track.setRecord(r);
+
+			arrayOfTrack.add(track);
+		}
+		
+		return arrayOfTrack;
+		
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+		return null;
+		
+	}
+	
+	
+	public ArrayList<Track> RecupListOfTrackByRecordName(String name){
+		
+		ArrayList<Track> arrayOfTrack = new ArrayList<Track>();
+		
+		try {
+		st = ConnexionDB.Con.prepareStatement("select tr.id, tr.title, tr.rhythm, tr.label, tr.playing_time, tr.release_date, st.name, pe.name, pe.id, tp.name, re.id, re.name " +
+												"from Tracks tr, Style st, Person pe, Tracks_has_Person thp, TypePerson tp, Record_has_Tracks rht, Record re " +
+												"where re.name=? " +
+												"and st.id=tr.Style_id " +
+												"and thp.Tracks_id=tr.id " +
+												"and thp.Person_id=pe.id " +
+												"and tp.id=pe.TypePerson_id " +
+												"and rht.Record_id=re.id " +
+												"and rht.Tracks_id=tr.id");
+		st.setString(1, name);
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+			Track track = new Track();
+			Person p = new Person();
+			Record r = new Record();
+			
+			track.setId(rs.getInt("tr.id"));
+			track.setTitle(rs.getString("tr.title"));
+			track.setRhythm(rs.getInt("tr.rhythm"));
+			track.setLabel(rs.getString("tr.label"));
+			track.setPlaying_time(rs.getTime("tr.playing_time"));
+			track.setRelease_date(rs.getDate("tr.release_date"));
+			track.setStyle(rs.getString("st.name"));
+			
+			p.setName(rs.getString("pe.name"));
+			p.setId(rs.getInt("pe.id"));
+			p.setTypePerson(rs.getString("tp.name"));
+			track.setPerson(p);
+			
+			r.setId(rs.getInt("re.id"));
+			r.setName(rs.getString("re.name"));
+			track.setRecord(r);
+
+			arrayOfTrack.add(track);
+		}
+		
+		return arrayOfTrack;
+		
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+		return null;
+		
+	}
+
+}
